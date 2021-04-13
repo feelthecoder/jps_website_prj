@@ -1392,9 +1392,7 @@
         width: 100%;
         padding: 50px 40px 110px 40px;
     }
-    .cprt {
-        padding-left: 0px;
-    }
+    .cprt {}
 }
 
 @media (max-width:574px) {

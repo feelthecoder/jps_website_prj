@@ -17,6 +17,7 @@
     <link rel="icon" href="images/fevicon/fevicon.png" type="image/gif" />
     <!-- bootstrap css -->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Site css -->
     <link rel="stylesheet" href="css/style.css" />
     <!-- responsive css -->
@@ -31,13 +32,43 @@
     <link rel="stylesheet" type="text/css" href="revolution/css/settings.css" />
     <link rel="stylesheet" type="text/css" href="revolution/css/layers.css" />
     <link rel="stylesheet" type="text/css" href="revolution/css/navigation.css" />
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-      <![endif]-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+
 </head>
 
 <body id="default_theme" class="it_service">
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-storage.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyChI9vW4zHcl9cWjxprUcdf9JJpNy9LiSU",
+            authDomain: "jp-securities.firebaseapp.com",
+            projectId: "jp-securities",
+            storageBucket: "jp-securities.appspot.com",
+            messagingSenderId: "657110717043",
+            appId: "1:657110717043:web:e2ffcd9a8306ca0bb99006",
+            measurementId: "G-MR4VKKEJ0Z"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+
     <!-- loader -->
     <div class="bg_load"> <img class="loader_animation" src="images/loaders/loader_1.png" alt="#" /> </div>
     <!-- end loader -->
@@ -102,11 +133,11 @@
                         <div class="menu_side">
                             <div id="navbar_menu">
                                 <ul class="first-ul">
-                                    <li> <a class="active" href="index.html">Home</a>
+                                    <li> <a class="active" href="index.html" id="home_link">Home</a>
 
                                     </li>
-                                    <li><a href="about_security_service.html">About Us</a></li>
-                                    <li> <a href="security_service.html">Services</a>
+                                    <li><a href="about_security_service.html" id="about_link">About Us</a></li>
+                                    <li> <a href="security_service.html" id="service_link">Services</a>
                                         <ul>
                                             <li>
                                                 <a href="total_security_solution.html">Total Security Solutions</a>
@@ -134,15 +165,15 @@
                                             </li>
                                         </ul>
                                     </li>
-                                    <li> <a href="jp_security_clients.html">Clients</a>
+                                    <li> <a href="jp_security_clients.html" id="client_link">Clients</a>
                                     </li>
-                                    <li> <a href="security_work.html">Our Work</a>
+                                    <li> <a href="security_work.html" id="work_link">Our Work</a>
                                         <ul>
                                             <li><a href="security_service_gallery.html">Gallery</a></li>
                                             <li><a href="security_service_experience.html">Work Experience</a></li>
                                         </ul>
                                     </li>
-                                    <li> <a href="recruitment_and_training.html">Recruitment & Training</a>
+                                    <li> <a href="recruitment_and_training.html" id="train_link">Recruitment & Training</a>
                                         <ul>
                                             <li><a href="security_recruitment.html">Recruitment</a></li>
                                             <li><a href="security_training.html">Training</a></li>
@@ -152,7 +183,7 @@
                                             </li>
                                         </ul>
                                     </li>
-                                    <li> <a href="contact_jp_security.html">Contact</a>
+                                    <li> <a href="contact_jp_security.html" id="contact_link">Contact</a>
                                     </li>
                                 </ul>
                             </div>
@@ -423,11 +454,11 @@
                         <div class="full text_align_center margin_bottom_30">
                             <div class="center">
                                 <div class="icon">
-                                    <img src="images/it_service/i1.png" alt="#" />
+                                    <i class="material-icons" style="font-size:100px;color:#17a5e9">security</i>
                                 </div>
                             </div>
                             <h4 class="theme_color">Total Security Solutions</h4>
-                            <p>Perspiciatis eos quos totam cum minima aut!</p>
+                            <p>We provide 24 hours security service with best secuirty guards for home security and office security along with complete security solutions.</p>
                         </div>
                     </a>
                 </div>
@@ -435,10 +466,10 @@
                     <a href="security_system.html">
                         <div class="full text_align_center margin_bottom_30">
                             <div class="center">
-                                <div class="icon"> <img src="images/it_service/i2.png" alt="#" /> </div>
+                                <div class="icon"> <i class="material-icons" style="font-size:100px;color:#17a5e9">shield</i> </div>
                             </div>
                             <h4 class="theme_color">Security Systems</h4>
-                            <p>Perspiciatis eos quos totam cum minima aut!</p>
+                            <p>Get best security service with our world class security systems for various residential, corporate, apartments, banks, etc security service.</p>
                         </div>
                     </a>
                 </div>
@@ -446,10 +477,10 @@
                     <a href="facility_management.html">
                         <div class="full text_align_center margin_bottom_30">
                             <div class="center">
-                                <div class="icon"> <img src="images/it_service/i3.png" alt="#" /> </div>
+                                <div class="icon"> <i class="material-icons" style="font-size:100px;color:#17a5e9">event_seat</i> </div>
                             </div>
                             <h4 class="theme_color">Facility Management</h4>
-                            <p>Perspiciatis eos quos totam cum minima aut!</p>
+                            <p>Want best facility management service? You are at your destination. Our security company provides facility management services at your place. </p>
                         </div>
                     </a>
                 </div>
@@ -457,10 +488,10 @@
                     <a href="cash_management.html">
                         <div class="full text_align_center margin_bottom_30 margin_0">
                             <div class="center">
-                                <div class="icon"> <img src="images/it_service/i4.png" alt="#" /> </div>
+                                <div class="icon"> <i class="material-icons" style="font-size:100px;color:#17a5e9">monetization_on</i> </div>
                             </div>
                             <h4 class="theme_color">Cash Management</h4>
-                            <p>Perspiciatis eos quos totam cum minima aut!</p>
+                            <p>Our company is responsible for cash flow and it's total security. We provide cash management at affordable price as it is key to financial stability.</p>
                         </div>
                     </a>
 
@@ -471,53 +502,47 @@
                     <a href="fire_safety_service.html">
                         <div class="full text_align_center margin_bottom_30">
                             <div class="center">
-                                <div class="icon"> <img src="images/it_service/i1.png" alt="#" /> </div>
+                                <div class="icon"> <i class="material-icons" style="font-size:100px;color:#17a5e9">local_fire_department</i></div>
                             </div>
                             <h4 class="theme_color">Fire Safety Services</h4>
-                            <p>Perspiciatis eos quos totam cum minima aut!</p>
+                            <p>We analyse, review and make arrangements for controlling, implementing, monitoring fire safety standards and also maintains those standards in your home/workplace.</p>
                         </div>
                     </a>
-
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                     <a href="detective_investigation.html">
                         <div class="full text_align_center margin_bottom_30">
                             <div class="center">
-                                <div class="icon"> <img src="images/it_service/i2.png" alt="#" /> </div>
+                                <div class="icon"> <i class="material-icons" style="font-size:100px;color:#17a5e9">search</i></div>
                             </div>
-                            <h4 class="theme_color">Detective & Investigation</h4>
-                            <p>Perspiciatis eos quos totam cum minima aut!</p>
+                            <h4 class="theme_color">Detective & Investigation </h4>
+                            <p>Our staff is well experienced and established in Detective & Investigation Service. We use advance methodology and make use of technology for these services.</p>
                         </div>
                     </a>
-
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                     <a href="manpower_management.html">
                         <div class="full text_align_center margin_bottom_30">
                             <div class="center">
-                                <div class="icon"> <img src="images/it_service/i3.png" alt="#" /> </div>
+                                <div class="icon"> <i class="material-icons" style="font-size:100px;color:#17a5e9">engineering</i></div>
                             </div>
                             <h4 class="theme_color">Manpower Management</h4>
-                            <p>Perspiciatis eos quos totam cum minima aut!</p>
+                            <p>Manpower is almost required at every event, function or at any place. We provide best people for you with right skills for doing right things to achieve a goal.</p>
                         </div>
                     </a>
-
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                     <a href="housekeeping_service.html">
-                        <div class="full text_align_center margin_bottom_30 margin_0">
+                        <div class="full text_align_center margin_bottom_30">
                             <div class="center">
-                                <div class="icon"> <img src="images/it_service/i4.png" alt="#" /> </div>
+                                <div class="icon"> <i class="material-icons" style="font-size:100px;color:#17a5e9">home_work</i></div>
                             </div>
                             <h4 class="theme_color">Housekeeping Services</h4>
-                            <p>Perspiciatis eos quos totam cum minima aut!</p>
+                            <p>We provide best housekeeping services at your doorstep like cleaner/maid or live in housekeepar, live out ousekeepar, gardening services,etc at affordable prices.</p>
                         </div>
                     </a>
-
                 </div>
             </div>
-            <br>
-            <br>
             <br>
             <br>
             <br>
@@ -526,7 +551,43 @@
                 <div class="col-md-6">
                     <div class="full" style="margin-top: 35px;">
                         <h3>Our Gallery</h3>
-                        <div></div>
+                        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                            <!-- Indicators -->
+                            <ol class="carousel-indicators">
+                                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                <li data-target="#myCarousel" data-slide-to="1"></li>
+                                <li data-target="#myCarousel" data-slide-to="2"></li>
+                                <li data-target="#myCarousel" data-slide-to="3"></li>
+                            </ol>
+
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    <img src="images/it_service/f.jpg">
+                                </div>
+
+                                <div class="item">
+                                    <img src="images/it_service/g.jpg">
+                                </div>
+
+                                <div class="item">
+                                    <img src="images/it_service/q.jpg">
+                                </div>
+                                <div class="item">
+                                    <img src="images/it_service/r.jpg">
+                                </div>
+                            </div>
+
+                            <!-- Left and right controls -->
+                            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevron-left"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
                         <p><a class="btn main_bt" href="security_service_gallery.html">View More</a></p>
                     </div>
                 </div>
@@ -534,11 +595,11 @@
                 <div class="col-md-6">
                     <div class="full" style="margin-top: 35px;">
                         <h3>Current Updates</h3>
-                        <ul>
-                            <li>We are hiring for security guard</li>
-                        </ul>
+                        <div id="myCarousele" class="carousel slide" data-ride="carousel">
+
+                        </div>
                         <p>
-                            <a class="btn main_bt" href="#">Check More</a>
+                            <a class="btn main_bt" href="security_current_updates.html">Check More</a>
                         </p>
                     </div>
                 </div>
@@ -569,7 +630,7 @@
                                 <div class="service_blog_inner">
                                     <div class="icon text_align_left"><img src="images/it_service/si1.png" alt="#" /></div>
                                     <h4 class="service-heading">Fast service</h4>
-                                    <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo.</p>
+                                    <p>We provide fast service and make our client security needs as our priority. </p>
                                 </div>
                             </div>
                         </div>
@@ -578,7 +639,7 @@
                                 <div class="service_blog_inner">
                                     <div class="icon text_align_left"><img src="images/it_service/si2.png" alt="#" /></div>
                                     <h4 class="service-heading">Best Security</h4>
-                                    <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo.</p>
+                                    <p>We are leading company in security industry and has satisfied clients across india.</p>
                                 </div>
                             </div>
                         </div>
@@ -587,7 +648,7 @@
                                 <div class="service_blog_inner">
                                     <div class="icon text_align_left"><img src="images/it_service/si3.png" alt="#" /></div>
                                     <h4 class="service-heading">Expert Staff</h4>
-                                    <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo.</p>
+                                    <p>We have experienced and expert staff working with us to help you.</p>
                                 </div>
                             </div>
                         </div>
@@ -596,7 +657,7 @@
                                 <div class="service_blog_inner">
                                     <div class="icon text_align_left"><img src="images/it_service/si4.png" alt="#" /></div>
                                     <h4 class="service-heading">Affordable Services</h4>
-                                    <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo.</p>
+                                    <p>Our services are affordable and best to suit your secuirty requirements.</p>
                                 </div>
                             </div>
                         </div>
@@ -605,7 +666,7 @@
                                 <div class="service_blog_inner">
                                     <div class="icon text_align_left"><img src="images/it_service/si5.png" alt="#" /></div>
                                     <h4 class="service-heading">Cost Effective</h4>
-                                    <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo.</p>
+                                    <p>We are cost effective and provide best services.</p>
                                 </div>
                             </div>
                         </div>
@@ -614,7 +675,7 @@
                                 <div class="service_blog_inner">
                                     <div class="icon text_align_left"><img src="images/it_service/si6.png" alt="#" /></div>
                                     <h4 class="service-heading">Reachable Support</h4>
-                                    <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo.</p>
+                                    <p>We provide full 24*7 support to our customers</p>
                                 </div>
                             </div>
                         </div>
@@ -625,51 +686,80 @@
     </div>
     <!-- end section -->
 
-    <!-- section -->
-    <div class="section padding_layout_1 light_silver gross_layout right_gross_layout">
+
+
+    <div class="values margin-bottom-60">
+
         <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="full">
-                        <div class="main_heading text_align_right">
+
+            <div class="col-sm-8 col-sm-offset-2">
+                <br><br><br>
+                <center>
+                    <h3 style="font-size: 35px; color: #000; line-height: 36px; font-weight: 600; position: relative; margin-bottom: 15px; text-transform: uppercase; margin-top: 15px; ">CEO Message</h3>
+                </center>
+                <hr class="hr-quote ">
+                <p class="text-center ">
+                    Our company is working with full energy to provide security services & otherto various clients of different industries whether it is a Bank, IT sector, Offices, Houses, Apartments, Chemical Industry, etc. We believe in transparency and hence keeps ourself
+                    very transaparent to our client and employees. We believe in good work ethics so that our staff could grow themselves along with company's growth. Our first priority is the quality services we are providing to our clients. We always
+                    emphasize on the quality of services we are providing to our clients and work culture for our employees.
+                </p>
+                <p class="text-center ">
+                    <span>CEO, JP Securities</span>
+                </p>
+
+            </div>
+            <!-- /.col -->
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <br><br>
+    <!-- section -->
+    <div class="section padding_layout_1 light_silver gross_layout right_gross_layout ">
+        <div class="container ">
+            <div class="row ">
+                <div class="col-md-12 ">
+                    <div class="full ">
+                        <div class="main_heading text_align_right ">
                             <h2>Our Feedback</h2>
-                            <p class="large">Easy and effective way to get your device repaired.</p>
+                            <p class="large ">Best destination for all your security requirements.</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row counter">
-                <div class="col-md-4"></div>
-                <div class="col-md-8">
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 margin_bottom_50">
-                            <div class="text_align_right"><i class="fa fa-smile-o"></i></div>
-                            <div class="text_align_right">
-                                <p class="counter-heading text_align_right">Happy Clients</p>
+            <div class="row counter ">
+                <div class="col-md-4 "></div>
+                <div class="col-md-8 ">
+                    <div class="row ">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 margin_bottom_50 ">
+                            <div class="text_align_right "> <i class="material-icons" style="font-size:100px;color:#17a5e9">sentiment_very_satisfied</i></div>
+                            <div class="text_align_right ">
+                                <p class="counter-heading text_align_right ">Happy Clients</p>
                             </div>
-                            <h5 class="counter-count">100</h5>
+                            <h5 class="counter-count ">100</h5>
                         </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 margin_bottom_50">
-                            <div class="text_align_right"><i class="fa fa-laptop"></i></div>
-                            <div class="text_align_right">
-                                <p class="counter-heading text_align_right">Services</p>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 margin_bottom_50 ">
+                            <div class="text_align_right "> <i class="material-icons" style="font-size:100px;color:#17a5e9">design_services</i></div>
+                            <div class="text_align_right ">
+                                <p class="counter-heading text_align_right ">Services</p>
                             </div>
-                            <h5 class="counter-count">15
+                            <h5 class="counter-count ">15
                             </h5>
                         </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 margin_bottom_50">
-                            <div class="text_align_right"><i class="fa fa-desktop"></i></div>
-                            <div class="text_align_right">
-                                <p class="counter-heading">Happy Employees</p>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 margin_bottom_50 ">
+                            <div class="text_align_right "> <i class="material-icons" style="font-size:100px;color:#17a5e9">badge</i></div>
+                            <div class="text_align_right ">
+                                <p class="counter-heading ">Happy Employees</p>
                             </div>
-                            <h5 class="counter-count">50</h5>
+                            <h5 class="counter-count ">50</h5>
                         </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 margin_bottom_50">
-                            <div class="text_align_right"><i class="fa fa-windows"></i></div>
-                            <div class="text_align_right">
-                                <p class="counter-heading">Experience</p>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 margin_bottom_50 ">
+                            <div class="text_align_right "> <i class="material-icons" style="font-size:100px;color:#17a5e9">work</i></div>
+                            <div class="text_align_right ">
+                                <p class="counter-heading ">Experience</p>
                             </div>
-                            <h5 class="counter-count">10</h5>
+                            <h5 class="counter-count ">18</h5>
                         </div>
                     </div>
                 </div>
@@ -678,71 +768,10 @@
     </div>
     <!-- end section -->
 
-    <!-- section -->
-    <div class="section padding_layout_1 testmonial_section white_fonts">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="full">
-                        <div class="main_heading text_align_left">
-                            <h2 style="text-transform: none;">What Clients Say?</h2>
-                            <p class="large">Here are testimonials from our clients..</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-7">
-                    <div class="full">
-                        <div id="testimonial_slider" class="carousel slide" data-ride="carousel">
-                            <!-- Indicators -->
-                            <ul class="carousel-indicators">
-                                <li data-target="#testimonial_slider" data-slide-to="0" class="active"></li>
-                                <li data-target="#testimonial_slider" data-slide-to="1"></li>
-                                <li data-target="#testimonial_slider" data-slide-to="2"></li>
-                            </ul>
-                            <!-- The slideshow -->
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <div class="testimonial-container">
-                                        <div class="testimonial-content"> You guys rock! Thank you for making it painless, pleasant and most of all hassle free! I wish I would have thought of it first. I am really satisfied with my first laptop service. </div>
-                                        <div class="testimonial-photo"> <img src="images/it_service/client1.jpg" class="img-responsive" alt="#" width="150" height="150"> </div>
-                                        <div class="testimonial-meta">
-                                            <h4>Maria Anderson</h4>
-                                            <span class="testimonial-position">CFO, Tech NY</span> </div>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="testimonial-container">
-                                        <div class="testimonial-content"> You guys rock! Thank you for making it painless, pleasant and most of all hassle free! I wish I would have thought of it first. I am really satisfied with my first laptop service. </div>
-                                        <div class="testimonial-photo"> <img src="images/it_service/client2.jpg" class="img-responsive" alt="#" width="150" height="150"> </div>
-                                        <div class="testimonial-meta">
-                                            <h4>Maria Anderson</h4>
-                                            <span class="testimonial-position">CFO, Tech NY</span> </div>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="testimonial-container">
-                                        <div class="testimonial-content"> You guys rock! Thank you for making it painless, pleasant and most of all hassle free! I wish I would have thought of it first. I am really satisfied with my first laptop service. </div>
-                                        <div class="testimonial-photo"> <img src="images/it_service/client3.jpg" class="img-responsive" alt="#" width="150" height="150"> </div>
-                                        <div class="testimonial-meta">
-                                            <h4>Maria Anderson</h4>
-                                            <span class="testimonial-position">CFO, Tech NY</span> </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-5">
-                    <div class="full"> </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- end section -->
-    <!-- section -->
     <div class="section">
+        <br>
+        <br>
+        <br><br>
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -750,8 +779,9 @@
                         <div class="contact_us_section">
                             <div class="call_icon"> <img src="images/it_service/phone_icon.png" alt="#" /> </div>
                             <div class="inner_cont">
-                                <h2>REQUEST A FREE QUOTE</h2>
+                                <h2>REQUEST A QUICK QUOTE</h2>
                                 <p>Get answers and advice from people you want it from.</p>
+                                <p>Call Us Now On +91 9837059394 </p>
                             </div>
                             <div class="button_Section_cont"> <a class="btn dark_gray_bt" href="contact_jp_security.html">Contact us</a> </div>
                         </div>
@@ -764,24 +794,17 @@
     <!-- section -->
     <div class="section padding_layout_1" style="padding: 50px 0;">
         <div class="container">
-            <h2 style="font-size: 35px;
-            color: #000;
-            line-height: 36px;
-            font-weight: 600;
-            position: relative;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-            margin-top: 15px;">Our Clients</h2><br><br>
+            <h2 style="font-size: 35px; color: #000; line-height: 36px; font-weight: 600; position: relative; margin-bottom: 15px; text-transform: uppercase; margin-top: 15px; ">Our Clients</h2><br><br>
             <div class="row">
                 <div class="col-md-12">
                     <div class="full">
-                        <ul class="brand_list">
-                            <li><img src="images/it_service/brand_icon1.png" alt="#" /></li>
-                            <li><img src="images/it_service/brand_icon2.png" alt="#" /></li>
-                            <li><img src="images/it_service/brand_icon3.png" alt="#" /></li>
-                            <li><img src="images/it_service/brand_icon4.png" alt="#" /></li>
+                        <ul class="brand_list ">
+                            <li><img src="images/it_service/c1.png " alt="#" /></li>
+                            <li><img src="images/it_service/c2.png " alt="#" /></li>
+                            <li><img src="images/it_service/c3.png " alt="# " /></li>
+                            <li><img src="images/it_service/c4.png " alt="#" /></li>
                             <li>
-                                <a href="jp_secuity_clients.html"><img src="images/it_service/brand_kno.png" alt="View More" /></a>
+                                <a href="jp_secuity_clients.html"><img src="images/it_service/c10.png " alt="View More" /></a>
                             </li>
                         </ul>
                     </div>
@@ -790,95 +813,95 @@
         </div>
     </div>
     <!-- end section -->
-    <!-- Modal -->
-    <div class="modal fade" id="search_bar" role="dialog">
-        <div class="modal-dialog">
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal"><i class="fa fa-close"></i></button>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-lg-8 col-md-8 col-sm-8 offset-lg-2 offset-md-2 offset-sm-2 col-xs-10 col-xs-offset-1">
-                            <div class="navbar-search">
-                                <form action="#" method="get" id="search-global-form" class="search-global">
-                                    <input type="text" placeholder="Type to search" autocomplete="off" name="s" id="search" value="" class="search-global__input">
-                                    <button class="search-global__btn"><i class="fa fa-search"></i></button>
-                                    <div class="search-global__note">Begin typing your search above and press return to search.</div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Model search bar -->
     <!-- footer -->
     <footer class="footer_style_2">
-        <div class="container-fuild">
-            <div class="row">
-                <div class="footer_blog">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="main-heading left_text">
-                                <h2>It Next Theme</h2>
-                            </div>
-                            <p>Tincidunt elit magnis nulla facilisis. Dolor sagittis maecenas. Sapien nunc amet ultrices, dolores sit ipsum velit purus aliquet, massa fringilla leo orci.</p>
-                            <ul class="social_icons">
-                                <li class="social-icon fb"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                <li class="social-icon tw"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                <li class="social-icon gp"><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="main-heading left_text">
-                                <h2>Additional links</h2>
-                            </div>
-                            <ul class="footer-menu">
-                                <li><a href="it_about.html"><i class="fa fa-angle-right"></i> About us</a></li>
-                                <li><a href="it_term_condition.html"><i class="fa fa-angle-right"></i> Terms and conditions</a></li>
-                                <li><a href="it_privacy_policy.html"><i class="fa fa-angle-right"></i> Privacy policy</a></li>
-                                <li><a href="it_news.html"><i class="fa fa-angle-right"></i> News</a></li>
-                                <li><a href="it_contact.html"><i class="fa fa-angle-right"></i> Contact us</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="main-heading left_text">
-                                <h2>Services</h2>
-                            </div>
-                            <ul class="footer-menu">
-                                <li><a href="it_data_recovery.html"><i class="fa fa-angle-right"></i> Data recovery</a></li>
-                                <li><a href="it_computer_repair.html"><i class="fa fa-angle-right"></i> Computer repair</a></li>
-                                <li><a href="it_mobile_service.html"><i class="fa fa-angle-right"></i> Mobile service</a></li>
-                                <li><a href="it_network_solution.html"><i class="fa fa-angle-right"></i> Network solutions</a></li>
-                                <li><a href="it_techn_support.html"><i class="fa fa-angle-right"></i> Technical support</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="main-heading left_text">
-                                <h2>Contact us</h2>
-                            </div>
-                            <p>123 Second Street Fifth Avenue,<br> Manhattan, New York<br>
-                                <span style="font-size:18px;"><a href="tel:+9876543210">+987 654 3210</a></span></p>
-                            <div class="footer_mail-section">
-                                <form>
-                                    <fieldset>
-                                        <div class="field">
-                                            <input placeholder="Email" type="text">
-                                            <button class="button_custom"><i class="fa fa-envelope" aria-hidden="true"></i></button>
-                                        </div>
-                                    </fieldset>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
+
+        <div class="row" style="margin:20px;">
+            <div class="col-md-3">
+                <div class="main-heading left_text ">
+                    <h2>JP Securities Pvt. Ltd.</h2>
                 </div>
-                <div class="cprt">
-                    <p>ItNext © Copyrights 2019 Design by html.design</p>
-                </div>
+                <p>JP securities is leading security service provider based in Defense Colony, New Delhi. JP Securities provide security guards for various apartments, banks, guest houses,etc. We also provide other different security and investigation services.
+                </p>
+                <ul class="list-inline">
+                    <li>
+                        <a class="fa fa-facebook" href="https://www.facebook.com/JP-Security-Services-158632251511218/" title="Facebook" target="_blank"></a>
+                    </li>
+                    <li>
+                        <a class="fa fa-twitter" href="https://twitter.com/SecuritiesJp?s=08" title="Twitter" target="_blank"></a>
+                    </li>
+                    <li>
+                        <a class="fa fa-linkedin" href="https://www.linkedin.com/company/jp-securities" title="LinkedIn" target="_blank"></a>
+                    </li>
+                    <li>
+                        <a class="fa fa-instagram" href="https://www.instagram.com/jp_security_services?igshid=wd959e5h3hod" title="Instagram" target="_blank"></a>
+                    </li>
+                </ul>
             </div>
+            <div class="col-md-3">
+                <div class="main-heading left_text">
+                    <h2>Additional links</h2>
+                </div>
+                <ul class="footer-menu ">
+                    <li><a href="about_security_service.html"><i class="fa fa-angle-right "></i> About us</a></li>
+                    <li><a href="security_recruitment.html"><i class="fa fa-angle-right "></i> Recruitment</a></li>
+                    <li><a href="security_work.html"><i class="fa fa-angle-right "></i> Our Work</a></li>
+                    <li><a href="security_current_updates.html"><i class="fa fa-angle-right "></i> Current Updates</a></li>
+                    <li><a href="contact_jp_security.html"><i class="fa fa-angle-right "></i> Contact us</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <div class="main-heading left_text ">
+                    <h2>Services</h2>
+                </div>
+                <ul class="footer-menu">
+                    <li>
+                        <a href="total_security_solution.html">Total Security Solutions</a>
+                    </li>
+                    <li>
+                        <a href="seurity_system.html">Security Systems</a>
+                    </li>
+                    <li>
+                        <a href="facility_management.html">Facility Management</a>
+                    </li>
+                    <li>
+                        <a href="cash_management.html">Cash Management</a>
+                    </li>
+                    <li>
+                        <a href="fire_safety_service.html">Fire Safety Services</a>
+                    </li>
+                    <li>
+                        <a href="detective_investigation.html">Detective & Investigation</a>
+                    </li>
+                    <li>
+                        <a href="manpower_management.html">Manpower Management</a>
+                    </li>
+                    <li>
+                        <a href="housekeeping_service.html">Housekeeping Services</a>
+
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <div class="main-heading left_text ">
+                    <h2>Contact us</h2>
+                </div>
+                <p>Public School, H.no- B-3/1,<br> Defence Colony, New Delhi,<br> Delhi 110024<br>
+                    <span style="font-size:18px;"><a href="tel:+91 9837059394">+91 9837059394</a></span><br>
+                    <span style="font-size:18px;"><a href="mailto:jpsspal92@gmail.com">jpsspal92@gmail.com</a></span></p>
+            </div>
+        </div> <br>
+        <br>
+
+        <div class="cprt" style="padding: 10px;">
+            <center>
+                <p>Copyright © JP Securities Pvt. Ltd.</p><br>
+                <p>Design & Developed by
+                    <a href="https://www.feelthecoder.com">
+                        feel_the_coder
+                    </a>
+                </p>
+            </center>
         </div>
     </footer>
     <!-- end footer -->
@@ -903,6 +926,67 @@
     <script src="revolution/js/extensions/revolution.extension.parallax.min.js"></script>
     <script src="revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
     <script src="revolution/js/extensions/revolution.extension.video.min.js"></script>
+
+    <script>
+        $('#about_link').removeClass("active");
+        $('#home_link').addClass("active");
+        $('#service_link').removeClass("active");
+        $('#clients_link').removeClass("active");
+        $('#work_link').removeClass("active");
+        $('#train_link').removeClass("active");
+        $('#contact_link').removeClass("active");
+    </script>
+
+    <script>
+        var list = firebase.database().ref("updates/").limitToLast(4);
+        var liste = firebase.database().ref("updates/").limitToLast(4);
+
+        liste.on("value", function(cats) {
+
+            if (cats.exists()) {
+                var catHtml = "<ol class='carousel-indicators'> <li data-target = 'myCarousele' data-slide-to='";
+                catHtml += 0 + "' class='active'></li>";
+                var i = 1;
+                cats.forEach(function(cat) {
+                    catHtml += "<li data-target = 'myCarousele' data-slide-to='";
+                    catHtml += i + "'></li>";
+
+                });
+                catHtml = "</ol>"
+                $("#myCarousele").html(catHtml);
+            };
+        });
+        list.on("value", function(cats) {
+
+            if (cats.exists()) {
+                var catHtml = "<div class='carousel-inner'>";
+                var i = 0;
+                cats.forEach(function(cat) {
+                    if (i == 0) {
+                        catHtml += "<div class ='item active'>"
+                        catHtml += "<img src='"
+                        catHtml += cat.val().image;
+                        catHtml += "'><p>";
+                        catHtml += cat.val().message;
+                        catHtml += "</p></div>"
+                        i++;
+                    } else {
+                        catHtml += "<div class ='item'>"
+                        catHtml += "<img src='"
+                        catHtml += cat.val().image;
+                        catHtml += "'><p>";
+                        catHtml += cat.val().message;
+                        catHtml += "</p></div>"
+                        i++;
+                    }
+
+                });
+                catHtml += "</div></div>";
+                $("#myCarousele").html(catHtml);
+            };
+        });
+    </script>
+
 </body>
 
 </html>
